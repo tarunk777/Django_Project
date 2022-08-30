@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+  <body>    
+<!--dog section starts-->
+<div class="container mt-4">
+    <h1 class="text-center">Dogs</h1>
+    <div class="content-section row row-cols-1 row-cols-md-3 g-4">
+  
+      {% for dog in dogs%}      
+      <div class="col">
+        <div class="card">
+          
+          <div class="card-body text-center">
+            <img src="{{dog.p_image.url}}" class="card-img-top img-thumbnail" style="width:200px; height:230px" alt="...">
+            <h5 class="card-title text-center">{{dog.p_name}}</h5>
+            <p class="card-text text-center">{{dog.p_description}}</p>
+            <div class="align-center mt-2 text-center">
+              <a href="{% url 'Webapp:viewDetail' dog.id %}" class="btn btn-info">
+                  View Details
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+                </svg>
+              </a>       
+          </div> 
+          </div>
+        </div>
+      </div>      
+      {% endfor %}
+   
+    </div>
+    <center>
+        <div class="align-center mt-2">
+            <a href="#" class="btn btn-success">
+                View More
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+              </svg>
+            </a>       
+        </div>  
+    </center>
+  </div>   
+<!--dog section ends-->
+
+<!--cat section starts-->
+<div class="container mt-4">
+  <h1 class="text-center">Cats</h1>
+  <div class="content-section row row-cols-1 row-cols-md-3 g-4">
+    {% for cat in cats%}      
+    <div class="col">
+      <div class="card">
+        <div class="card-body text-center">
+        <img src="{{cat.p_image.url}}" class="card-img-top img-thumbnail" style="width:200px; height:230px"" alt="...">
+        
+          <h5 class="card-title text-center" >{{cat.p_name}}</h5>
+          <p class="card-text text-center">{{cat.p_description}}</p>
+          <div class="align-center mt-2 text-center">
+            <a href="{% url 'Webapp:viewDetail' cat.id %}" class="btn btn-info">
+                View Details
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+              </svg>
+            </a>       
+        </div> 
+        </div>
+      </div>
+    </div>      
+    {% endfor %}
+ 
+  </div>
+  <center>
+      <div class="align-center mt-2">
+          <a href="#" class="btn btn-success">
+              View More
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+            </svg>
+          </a>       
+      </div>  
+  </center>
+</div>   
+<!--cat section ends-->
+
+<!--fish section starts-->
+<div class="container mt-4">
+  <h1 class="text-center">Fish</h1>
+  <div class="content-section row row-cols-1 row-cols-md-3 g-4">
+    {% for fish in fishes %}      
+    <div class="col">
+      <div class="card">
+        <div class="card-body text-center">
+        <img src="{{fish.p_image.url}}" class="card-img-top img-thumbnail" style="width:200px; height:230px"" alt="...">
+        
+          <h5 class="card-title text-center">{{fish.p_name}}</h5>
+          <p class="card-text text-center">{{fish.p_description}}</p>
+          <div class="align-center mt-2 text-center">
+            <a href="{% url 'Webapp:viewDetail' fish.id %}" class="btn btn-info">
+                View Details
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+              </svg>
+            </a>       
+        </div>  
+          
+        </div>
+      </div>
+    </div>      
+    {% endfor %}
+ 
+  </div>
+  <center>
+      <div class="align-center mt-2">
+          <a href="#" class="btn btn-success">
+              View More
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+            </svg>
+          </a>       
+      </div>  
+  </center>
+</div>   
+<!--fish sections ends-->
+</body>
+{% endblock body %}

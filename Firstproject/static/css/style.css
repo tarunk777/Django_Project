@@ -1,0 +1,17 @@
+*
+{
+    
+    font-family: 'Century Gothic font';
+}
+.content-section
+{
+    background-color: #DCDCDC;
+    padding: 2%;
+}
+
+h1{
+    padding: 5%;
+    background-color: #007E33;
+    color: white;
+    margin: 5%;
+}

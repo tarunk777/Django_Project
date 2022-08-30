@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% comment %} {% extends 'baseCDN.html' %} {% endcomment %}
+
+{% block body %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Contact_Us</title>
+    </head>
+    <body>
+        {% if messages %}
+        {% for msg in messages %}
+          <div class="alert text-center alert-{{msg.tags}}"><b>{{msg}}</b></div>
+        {% endfor %}
+        {% endif %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h1 class="text-center bg-info p-1 mt-2">Contact US</h1>
+<form class="contact" method="post">
+  {% csrf_token %}
+    <div class="form-group">
+        <label for="exampleInputEmail1"> Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name" placeholder="Enter Name" required>
+        
+      </div>
+      <div class="form-group mt-3">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Enter email" required>
+        
+      </div>
+      <div class="form-group mt-3">
+        <label for="exampleInputEmail1">State</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="state" placeholder="Enter State" required>
+        
+      </div>
+      <div class="form-group mt-3">
+        <label for="exampleInputEmail1">City</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="city" placeholder="Enter City" required>
+        
+      </div>
+      <div class="form-group mt-3">
+        <label for="exampleInputEmail1">Zip</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" maxlength="6"  aria-describedby="emailHelp" name="zip" placeholder="Enter zip" required>
+        
+      </div>
+
+    <div class="form-group mt-3">
+      <label for="exampleInputEmail1">write your query here</label>
+      <textarea class="form-control"  name="query"id="exampleFormControlTextarea1" rows="3"></textarea>
+      
+    </div>
+    
+    <div class="form-group form-check mt-3">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" Required>
+      <label class="form-check-label text-danger" for="exampleCheck1"><b>Confirm details</b></label>
+    </div>
+    <div class="text-center">
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+  {% endblock body %}

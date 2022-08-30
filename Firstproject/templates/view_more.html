@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="container">
+        <h1 class="heading"> our daily posts</h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="{{product.p_image.url}}" class="card-img-top img-thumbnail" style="width:200px; height:230px" alt="...">
+
+                </div>
+                <div class="content">
+                    <h5 class="card-title">{{product.p_name}}</h5>
+                    <p class="card-text">{{product.p_description}}</p>
+                    <h3> blog title goes here</h3>
+                    <p>this is about our titile</p>
+                    <a href="/Login" class="btn">View More</a>
+                    <div class="icons">
+                        <span><i class="fas-fa-calender"></i>26 Aug,2022</span>
+                        <span><i class="fas-fa-calender"></i>By Admin</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+{% endblock body %}
+
+    

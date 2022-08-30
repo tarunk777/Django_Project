@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block body %}
+<center>
+     <div class="container p-3 ">
+        <div class="row">
+            <div class="col-md-6 text-center p-5 border bg-white">
+                    <div class="card">
+                        <div class="card-header">
+                          Featured
+                        </div>
+                        <div class="card-body text-center">
+                          <img src="{{product.p_image.url}}" class="card-img-top img-thumbnail" style="width:200px; height:230px" alt="...">
+                          <h5 class="card-title">{{product.p_name}}</h5>
+                          <p class="card-text">{{product.p_description}}</p>
+                          <a href="/home" class="btn btn-primary">Go To Home Page</a>
+                        </div>
+                      </div>
+                    <div class="col-md-4 text-center text-danger p-2"><i class="fa-solid fa-money-check-dollar fa-2x"></i>
+                        <p><strong>Cash On Delivery</strong></p>
+                    </div>
+                    
+                    </div><!-- comment -->
+                    <div class="col-md-4 text-center text-warning p-2"><i class="fa-solid fa-truck fa-2x"></i>
+                        <p><strong>Free Shipping</strong></p>
+                    </div>
+                </div>
+                <div class="text-center p-3">     
+                        <a href="login.jsp" class="btn btn-primary btn-sm ml-4"><i class="fas fa-cart-plus"></i> Add Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </center>
+</body>
+</html>
+{% endblock body %}

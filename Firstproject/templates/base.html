@@ -1,0 +1,27 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online Pet Shop</title>
+  </head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% include 'nav.html' %}
+{% block body %}
+{% endblock body %}
+  <!-- Footer -->
+<div class="container-fluid">
+<footer class="font-small text-light bg-dark mt-4">
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">
+    <p>© 2020 Copyright:</p>
+    <p> all rights reserved online pet shop  </p>
+  </div>
+  <!-- Copyright -->
+</footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<!-- Footer -->
+</html>
